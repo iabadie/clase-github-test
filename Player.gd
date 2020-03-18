@@ -15,7 +15,7 @@ func _physics_process(delta):
 		velocity.y += 10
 	elif Input.is_pressed('down'):
 		selectedAnimation = "downAnimation";
-		velocity.y -= 10
+		velocity.y -= 20
 	elif Input.is_pressed('left'):
 		selectedAnimation = "leftAnimation";
 		velocity.x -= 10
