@@ -1,10 +1,10 @@
-﻿extends KinematicBody2D
+extends KinematicBody2D
 
 var velocity = Vector2(0,0);
 
 func _ready():
 	position = $PlayerPosition.global_position;
-func vida = 3
+
 
 # Funcion que se ejecuta constantemente
 func _physics_process(delta):
@@ -12,18 +12,16 @@ func _physics_process(delta):
 	var selectedAnimation;
 	if Input.is_pressed('up'):
 		selectedAnimation = "upAnimation";
-
+		velocity.y += 10
 	elif Input.is_pressed('down'):
 		selectedAnimation = "downAnimation";
-		velocity.y -= 0
+		velocity.y -= 20
 	elif Input.is_pressed('left'):
 		selectedAnimation = "leftAnimation";
-
-		velocity.x -= 250
+		velocity.x -= 10
 	elif Input.is_pressed('right'):
 		selectedAnimation = "rightAnimation";
-		velocity.x += 250
-	Costilla-Miguel
+		velocity.x += 10
 	else:
 		selectedAnimation = null;
 	
@@ -36,8 +34,7 @@ func _physics_process(delta):
 	# Ejecuta el movimiento del personaje
 	move_and_slide(velocity)
 	pass
-        
-        if vida = 0 muerteanimation  
+
 # Detecta si se pareta el boton y ejecuta un golpe.
 func hit_detection():
 	if Input.is_pressed('space_bar'):
