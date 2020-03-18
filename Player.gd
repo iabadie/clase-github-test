@@ -1,6 +1,7 @@
 ﻿extends KinematicBody2D
 
 var velocity = Vector2(0,0);
+var vida = 10
 
 func _ready():
 	position = $PlayerPosition.global_position;
