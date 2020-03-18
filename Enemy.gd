@@ -1,7 +1,7 @@
 extends RigidBody2D
 
-const VELOCIDAD = 10;
-const VIDA = 5;
+const VELOCIDAD = 500;
+const VIDA = 6;
 
 var velocity = Vector2(VELOCIDAD,0);
 var vida = VIDA;
