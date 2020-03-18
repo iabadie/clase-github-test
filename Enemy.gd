@@ -1,7 +1,10 @@
 extends RigidBody2D
 
-var velocity = Vector2(0,0);
-var vida = 3
+const VELOCIDAD = 10;
+const VIDA = 3;
+
+var velocity = Vector2(VELOCIDAD,0);
+var vida = VIDA;
 
 
 func _ready():
