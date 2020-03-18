@@ -12,16 +12,16 @@ func _physics_process(delta):
 	var selectedAnimation;
 	if Input.is_pressed('up'):
 		selectedAnimation = "upAnimation";
-		velocity.y += 10
+		velocity.y += 30
 	elif Input.is_pressed('down'):
 		selectedAnimation = "downAnimation";
-		velocity.y -= 20
+		velocity.y -= 30
 	elif Input.is_pressed('left'):
 		selectedAnimation = "leftAnimation";
-		velocity.x -= 10
+		velocity.x -= 20
 	elif Input.is_pressed('right'):
 		selectedAnimation = "rightAnimation";
-		velocity.x += 10
+		velocity.x += 20
 	else:
 		selectedAnimation = null;
 	
