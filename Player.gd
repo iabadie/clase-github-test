@@ -15,10 +15,11 @@ func _physics_process(delta):
 	if Input.is_pressed('up'):
 
 		selectedAnimation = "upAnimation";
+
 		velocity.y += 30
 	elif Input.is_pressed('down'):
 		selectedAnimation = "downAnimation";
-		velocity.y -= 5
+		velocity.y -= 25
 	
 	elif Input.is_pressed('left'):
 		selectedAnimation = "leftAnimation";
@@ -27,7 +28,6 @@ func _physics_process(delta):
 	elif Input.is_pressed('right'):
 		selectedAnimation = "rightAnimation";
 		velocity.x += 250
-	Costilla-Miguel
 
 	else:
 		selectedAnimation = null;
