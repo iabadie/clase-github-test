@@ -1,6 +1,8 @@
 extends KinematicBody2D
 
 var velocity = Vector2(0,0);
+var vida = 5
+var daño = 300
 
 func _ready():
 	position = $PlayerPosition.global_position;
@@ -12,16 +14,16 @@ func _physics_process(delta):
 	var selectedAnimation;
 	if Input.is_pressed('up'):
 		selectedAnimation = "upAnimation";
-		velocity.y += 10
+		velocity.y += 30
 	elif Input.is_pressed('down'):
 		selectedAnimation = "downAnimation";
-		velocity.y -= 20
+		velocity.y -= 5
 	elif Input.is_pressed('left'):
 		selectedAnimation = "leftAnimation";
-		velocity.x -= 10
+		velocity.x -= 50
 	elif Input.is_pressed('right'):
 		selectedAnimation = "rightAnimation";
-		velocity.x += 10
+		velocity.x += 50
 	else:
 		selectedAnimation = null;
 	
@@ -30,7 +32,7 @@ func _physics_process(delta):
 	# Sirve para frenar
 	if velocity == Vector2(0,0):
 		$AnimationPlayer.stop();
-	
+
 	# Ejecuta el movimiento del personaje
 	move_and_slide(velocity)
 	pass
