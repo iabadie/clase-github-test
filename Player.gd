@@ -11,8 +11,9 @@ func _physics_process(delta):
 	# 1) Detecta la direccion para seleccionar la animación
 	var selectedAnimation;
 	if Input.is_pressed('up'):
-		selectedAnimation = "upAnimation";
 
+		selectedAnimation = "ArribaAnimation";
+		velocity.y += 10
 
 	elif Input.is_pressed('down'):
 		selectedAnimation = "downAnimation";
