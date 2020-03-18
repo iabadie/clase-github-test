@@ -1,7 +1,7 @@
 extends RigidBody2D
 
-var velocity = Vector2(0,0);
-var vida = 3
+var velocity = Vector2(10,0);
+var vida = 5
 
 
 func _ready():
@@ -18,7 +18,7 @@ func _physics_process(delta):
 func receive_hit():
 	vida -= 1
 	if vida == 0:
-		print("Enemigo eliminado")
+		print("Enemigo eliminado.")
 		eliminar_instancia()
 	pass
 
