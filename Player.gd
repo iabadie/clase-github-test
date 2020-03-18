@@ -40,3 +40,5 @@ func _physics_process(delta):
 	func hit():
 		hit_action()
 		pass
+
+
