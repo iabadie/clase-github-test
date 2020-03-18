@@ -1,7 +1,8 @@
 extends RigidBody2D
 
 var velocity = Vector2(0,0);
-var animation = null;
+var vida = 3
+
 
 func _ready():
 	position = $PlayerPosition.global_position;
@@ -15,6 +16,10 @@ func _physics_process(delta):
 
 
 func receive_hit():
+	vida -= 1
+	if vida == 0:
+		print("Enemigo eliminado")
+		eliminar_instancia()
 	pass
 
 func hit():
