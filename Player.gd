@@ -1,4 +1,4 @@
-﻿extends KinematicBody2D
+extends KinematicBody2D
 
 var velocity = Vector2(0,0);
 var vida = 5
@@ -6,7 +6,7 @@ var daño = 300
 
 func _ready():
 	position = $PlayerPosition.global_position;
-func vida = 3
+
 
 # Funcion que se ejecuta constantemente
 func _physics_process(delta):
@@ -21,14 +21,13 @@ func _physics_process(delta):
 		selectedAnimation = "downAnimation";
 		velocity.y -= 25
 	
+
 	elif Input.is_pressed('left'):
 		selectedAnimation = "leftAnimation";
-
-		velocity.x -= 250
+		velocity.x -= 10
 	elif Input.is_pressed('right'):
 		selectedAnimation = "rightAnimation";
-		velocity.x += 250
-
+		velocity.x += 10
 	else:
 		selectedAnimation = null;
 	
@@ -41,8 +40,7 @@ func _physics_process(delta):
 	# Ejecuta el movimiento del personaje
 	move_and_slide(velocity)
 	pass
-        
-        if vida = 0 muerteanimation  
+
 # Detecta si se pareta el boton y ejecuta un golpe.
 func hit_detection():
 	if Input.is_pressed('space_bar'):
